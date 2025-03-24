@@ -1,7 +1,8 @@
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-block: 20px 10px;
+    padding-block: 20px 10px;
+    background-color: var(--color-white);
 }
 
 .attribution a {
@@ -10,4 +11,10 @@
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+    .attribution {
+        background: none;
+    }
 }

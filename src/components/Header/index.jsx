@@ -1,14 +1,18 @@
 import styles from "./Header.module.css"
 
-const Header = ({ notificationsQt }) => {
+const Header = ({ notificationsQt, markAllAsRead }) => {
     return (
         <header className={styles.header}>
             <h1 className={styles.header__title}>
                 Notifications
-                <span className={styles.header__notificationsQt}>3</span>
+
+                {notificationsQt >= 1 &&
+                    <span className={styles.header__notificationsQt}>{notificationsQt}</span>}
             </h1>
-            
-            <button className={styles.header__mark}>Mark all as read</button>
+
+            <button
+                className={styles.header__mark}
+                onClick={markAllAsRead}>Mark all as read</button>
         </header>
     )
 }

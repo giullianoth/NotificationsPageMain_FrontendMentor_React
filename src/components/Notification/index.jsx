@@ -1,12 +1,14 @@
 import { users } from "../../definitions/definitions"
 import styles from "./Notification.module.css"
 
-const Notification = ({ notification }) => {
-    const { userId, activity, timePast, unread, target } = notification
+const Notification = ({ notification, markAsRead }) => {
+    const { id, userId, activity, timePast, unread, target } = notification
     const user = users.find(usersItem => usersItem.id === userId)
 
     return (
-        <article className={styles.notification + (unread ? ` ${styles.unread}` : "")}>
+        <article
+            className={styles.notification + (unread ? ` ${styles.unread}` : "")}
+            onClick={() => markAsRead(id)}>
             <div className={styles.notification__userPhoto}>
                 <img src={user.photo} alt={user.name} />
             </div>

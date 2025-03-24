@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header__title {
+    font-size: 1.2em;
+    color: var(--color-very-dark-blue);
+}
+
+.header__notificationsQt {
+    font-size: 0.7em;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    display: inline-block;
+    padding: 1px 8px;
+    margin-left: 10px;
+    border-radius: var(--radius-small);
+    transition: var(--transition);
+}
+
+.header__mark {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.header__mark:hover {
+    color: var(--color-blue);
+}
+
+@media screen and (min-width: 600px) {
+    .header__title {
+        font-size: 1.6em;
+    }
+
+    .header__notificationsQt {
+        padding-inline: 12px;
+    }
+}

@@ -1,0 +1,13 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-block: 20px 10px;
+}
+
+.attribution a {
+    color: var(--color-blue);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
